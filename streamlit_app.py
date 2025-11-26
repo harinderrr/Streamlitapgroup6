@@ -129,8 +129,8 @@ with st.sidebar:
 def load_model():
     """Load the trained model and artifacts"""
     try:
-        model = joblib.load('models/best_model.pkl')
-        scaler = joblib.load('models/scaler.pkl')
+        model = joblib.load('.devcontainer/best_model.pkl')
+        scaler = joblib.load('.devcontainer/scaler.pkl')
         return model, scaler
     except:
         st.info("Model files not found. Using mock predictions for demo.")
